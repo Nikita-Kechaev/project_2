@@ -1,0 +1,40 @@
+Content-Type: multipart/alternative;
+ boundary="===============0207392040640013911=="
+MIME-Version: 1.0
+Subject: 
+ =?utf-8?b?0JDQutGC0LjQstCw0YbQuNGPINCw0LrQutCw0YPQvdGC0LAg0L3QsCAxMjcuMC4w?=
+ =?utf-8?b?LjE6ODAwMA==?=
+From: webmaster@localhost
+To: Nkech@mail.ru
+Date: Wed, 14 Sep 2022 20:42:21 -0000
+Message-ID: <166318814110.54845.16425204907182955606@kichkich>
+
+--===============0207392040640013911==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+Вы получили это письмо, потому что вам нужно завершить процесс активации учетной записи на 127.0.0.1:8000.
+
+Пожалуйста, перейдите на следующую страницу, чтобы активировать учетную запись:
+http://127.0.0.1:8000/api/auth/users/activation/MjQ/bbrlul-67dc3db724b2f5d17335e2669d95f25e
+
+Спасибо за использование нашего сайта!
+
+Команда 127.0.0.1:8000
+--===============0207392040640013911==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+<p>Вы получили это письмо, потому что вам нужно завершить процесс активации учетной записи на 127.0.0.1:8000.</p>
+
+<p>Пожалуйста, перейдите на следующую страницу, чтобы активировать учетную запись:</p>
+<p><a href="http://127.0.0.1:8000/api/auth/users/activation/MjQ/bbrlul-67dc3db724b2f5d17335e2669d95f25e">http://127.0.0.1:8000/api/auth/users/activation/MjQ/bbrlul-67dc3db724b2f5d17335e2669d95f25e</a></p>
+
+<p>Спасибо за использование нашего сайта!</p>
+
+<p>Команда 127.0.0.1:8000</p>
+--===============0207392040640013911==--
+
+-------------------------------------------------------------------------------

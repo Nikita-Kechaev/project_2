@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: backend/Dockerfile
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             gunicorn --workers=${GUNICORN_WORKERS_COUNT:-6} main.wsgi:application -b 0.0.0.0:8000"
+    ports:
+      - 5432
+    expose:
+      - 8000
+    volumes:
+      - ./backend:/home/app
+      - static_volume:/home/app/staticfiles
+      - media_volume:/home/app/mediafiles
+    env_file:
+      - ./.env
+    healthcheck:
+      test: curl --fail localhost:8000/healthcheck/ || exit 1
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/app/web/staticfiles
+      - media_volume:/app/web/mediafiles
+      - ./nginx/:/etc/nginx/conf.d/
+    ports:
+      - ${WEB_PORT:-8000}:80
+    env_file:
+      - ./.env
+    depends_on:
+      web:
+        condition: service_started
+
+volumes:
+  static_volume:
+  media_volume:
